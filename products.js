@@ -7,8 +7,9 @@
 //
 // tags:    sie, ihn, kinder, wichtel
 // price:   Zahl in Euro (nur für die Filter "Unter 20 €" / "Unter 50 €")
-// priceLabel: Text auf der Kachel. Richtwerte, Stand 21.10.2026 (aus Amazon-Bestsellerlisten
-//          und Suchergebnissen übernommen). Vor der Veröffentlichung gegenprüfen.
+// priceLabel: wird unten automatisch aus "price" als Preisbereich gebildet ("unter 20 €").
+//          Amazon verlangt aktuelle Preise, deshalb zeigen wir keine festen Beträge.
+//          "price" ist ein Richtwert (Stand 21.10.2026, aus Amazon-Listen übernommen).
 // emoji/color: Platzhalter, bis echte Produktbilder da sind (image: "bilder/xyz.jpg" überschreibt das)
 
 window.AMAZON_TAG = "ditudat-21"; // PartnerNet-Tracking-ID
@@ -46,3 +47,10 @@ window.PRODUCTS = [
   { title: "Tee-Geschenkset „Kleines Weihnachtswunder“", seller: "Amazon", url: amazon("B0FS1R28NP"), tags: ["wichtel", "sie", "ihn"], price: 6, priceLabel: "ca. 6 €", emoji: "🍵", color: "#cfe3d6" },
   { title: "Weihnachts-Glückskekse, 12 Stück", seller: "Amazon", url: amazon("B0F8P1Y5C5"), tags: ["wichtel", "sie", "ihn", "kinder"], price: 10, priceLabel: "ca. 10 €", emoji: "🥠", color: "#f3e4b8" }
 ];
+
+// Preisbereich statt festem Betrag
+window.PRODUCTS.forEach(function (p) {
+  var bands = [10, 20, 30, 40, 50, 75, 100];
+  var top = bands.find(function (b) { return p.price < b; });
+  p.priceLabel = top ? "unter " + top + " €" : "ab 100 €";
+});
