@@ -1,20 +1,48 @@
 // Alle Produkte der Seite stehen hier. Zum Ändern nur diese Liste bearbeiten.
-// url:      dein Affiliate-Link (aktuell Platzhalter "#")
-// seller:   Name des Verkäufers (wird auf dem Button angezeigt)
-// tags:     sie, ihn, kinder, wichtel
-// price:    Zahl in Euro (nur für die Filter "Unter 20 €" / "Unter 50 €"), priceLabel = Text auf der Kachel
+//
+// Amazon-Links entstehen aus der ASIN (Produktnummer in der Amazon-URL nach /dp/).
+// Sobald du bei Amazon PartnerNet angenommen bist, trage unten deine Partner-ID ein
+// (z. B. "deinname-21"). Dann hängt die Seite sie automatisch an alle Amazon-Links an.
+// Für Produkte anderer Händler (Awin usw.) setze statt "asin" ein eigenes "url".
+//
+// tags:    sie, ihn, kinder, wichtel
+// price:   Zahl in Euro (nur für die Filter "Unter 20 €" / "Unter 50 €")
+// priceLabel: Text auf der Kachel. Richtwerte, Stand 21.10.2026 (aus Amazon-Bestsellerlisten
+//          und Suchergebnissen übernommen). Vor der Veröffentlichung gegenprüfen.
 // emoji/color: Platzhalter, bis echte Produktbilder da sind (image: "bilder/xyz.jpg" überschreibt das)
+
+window.AMAZON_TAG = ""; // <- hier deine PartnerNet-ID eintragen
+
+function amazon(asin) {
+  return "https://www.amazon.de/dp/" + asin + (window.AMAZON_TAG ? "?tag=" + window.AMAZON_TAG : "");
+}
+
 window.PRODUCTS = [
-  { title: "Handgemachte Duftkerze im Glas", seller: "Etsy", url: "#", tags: ["sie", "wichtel"], price: 15, priceLabel: "ab ca. 15 €", emoji: "🕯️", color: "#f3d9c4" },
-  { title: "Kuschelige Strickdecke", seller: "Amazon", url: "#", tags: ["sie", "ihn"], price: 35, priceLabel: "ab ca. 35 €", emoji: "🧣", color: "#e4d3e9" },
-  { title: "Kaffee-Probierset aus kleinen Röstereien", seller: "Amazon", url: "#", tags: ["ihn", "sie"], price: 25, priceLabel: "ab ca. 25 €", emoji: "☕", color: "#e6d5bd" },
-  { title: "Gesellschaftsspiel für die ganze Familie", seller: "Otto", url: "#", tags: ["kinder", "ihn", "sie"], price: 20, priceLabel: "ab ca. 20 €", emoji: "🎲", color: "#cfe3d6" },
-  { title: "Wichtel-Set: Socken & Tee", seller: "Amazon", url: "#", tags: ["wichtel", "sie"], price: 9, priceLabel: "ab ca. 9 €", emoji: "🧦", color: "#f6d3d1" },
-  { title: "Kabellose Bluetooth-Kopfhörer", seller: "MediaMarkt", url: "#", tags: ["ihn", "sie"], price: 45, priceLabel: "ab ca. 45 €", emoji: "🎧", color: "#d3dcec" },
-  { title: "Bauklötze aus Holz", seller: "Amazon", url: "#", tags: ["kinder"], price: 18, priceLabel: "ab ca. 18 €", emoji: "🧱", color: "#f1e2b8" },
-  { title: "Grill- & Gewürzset", seller: "Amazon", url: "#", tags: ["ihn"], price: 22, priceLabel: "ab ca. 22 €", emoji: "🌶️", color: "#f2cdbb" },
-  { title: "Adventskalender zum Selbstbefüllen", seller: "Otto", url: "#", tags: ["kinder", "sie", "wichtel"], price: 12, priceLabel: "ab ca. 12 €", emoji: "🎄", color: "#cde5d4" },
-  { title: "Personalisierte Tasse mit Namen", seller: "Etsy", url: "#", tags: ["sie", "ihn", "wichtel"], price: 14, priceLabel: "ab ca. 14 €", emoji: "🎁", color: "#f5dbc9" },
-  { title: "Taschenlampe & Werkzeug-Multitool", seller: "Amazon", url: "#", tags: ["ihn", "wichtel"], price: 16, priceLabel: "ab ca. 16 €", emoji: "🔦", color: "#d8dde2" },
-  { title: "Premium-Pflegeset für Haut & Bad", seller: "Douglas", url: "#", tags: ["sie"], price: 40, priceLabel: "ab ca. 40 €", emoji: "🛁", color: "#e7d6ee" }
+  // Für Sie
+  { title: "Duftkerzen-Geschenkset, 12er-Pack", seller: "Amazon", url: amazon("B0F6CR563J"), tags: ["sie", "wichtel"], price: 17, priceLabel: "ca. 17 €", emoji: "🕯️", color: "#f3d9c4" },
+  { title: "Kuschelige Sherpa-Decke mit Ärmeln", seller: "Amazon", url: amazon("B0CHPCWDDT"), tags: ["sie", "ihn"], price: 37, priceLabel: "ca. 37 €", emoji: "🧣", color: "#e4d3e9" },
+  { title: "The Ordinary Niacinamid-Serum 10 %", seller: "Amazon", url: amazon("B01MDTVZTZ"), tags: ["sie", "wichtel"], price: 5, priceLabel: "ca. 5 €", emoji: "🧴", color: "#e7d6ee" },
+
+  // Für Ihn
+  { title: "Kaffee-Probierset: 5 Kaffees aus aller Welt", seller: "Amazon", url: amazon("B0733CKYSS"), tags: ["ihn", "sie"], price: 16, priceLabel: "ca. 16 €", emoji: "☕", color: "#e6d5bd" },
+  { title: "Soundcore P20i Bluetooth-Kopfhörer (In-Ear)", seller: "Amazon", url: amazon("B0BTYCRJSS"), tags: ["ihn", "sie"], price: 21, priceLabel: "ca. 21 €", emoji: "🎧", color: "#d3dcec" },
+  { title: "JBL Tune 530BT On-Ear-Kopfhörer", seller: "Amazon", url: amazon("B0FSGN86M9"), tags: ["ihn", "sie"], price: 39, priceLabel: "ca. 39 €", emoji: "🎧", color: "#cfd9e6" },
+  { title: "Philips Fusselrasierer", seller: "Amazon", url: amazon("B07M8J529S"), tags: ["ihn", "sie"], price: 11, priceLabel: "ca. 11 €", emoji: "🧺", color: "#d8dde2" },
+
+  // Spiele für alle
+  { title: "Flip 7 – Kartenspiel (Kosmos)", seller: "Amazon", url: amazon("B0DQVGD538"), tags: ["kinder", "ihn", "sie", "wichtel"], price: 10, priceLabel: "ca. 10 €", emoji: "🃏", color: "#cfe3d6" },
+  { title: "Hitster – Musik-Partyspiel", seller: "Amazon", url: amazon("B09T3K9ZC6"), tags: ["ihn", "sie", "kinder"], price: 15, priceLabel: "ca. 15 €", emoji: "🎵", color: "#f6d3d1" },
+  { title: "Stadt Land Weihnachten – Ratespiel", seller: "Amazon", url: amazon("B0DG5Y8K84"), tags: ["wichtel", "sie", "ihn", "kinder"], price: 10, priceLabel: "ca. 10 €", emoji: "🎲", color: "#d6e8dc" },
+  { title: "Perplexus Rebel – 3D-Kugellabyrinth", seller: "Amazon", url: amazon("B07MKCZJNJ"), tags: ["kinder", "ihn"], price: 16, priceLabel: "ca. 16 €", emoji: "🌀", color: "#dbe6f2" },
+
+  // Für Kinder
+  { title: "LEGO Star Wars Adventskalender 2026", seller: "Amazon", url: amazon("B0GGSK4J2N"), tags: ["kinder"], price: 25, priceLabel: "ca. 25 €", emoji: "🎄", color: "#cde5d4" },
+  { title: "LEGO City Adventskalender 2026", seller: "Amazon", url: amazon("B0GGSTTS1R"), tags: ["kinder"], price: 22, priceLabel: "ca. 22 €", emoji: "🚒", color: "#f1e2b8" },
+  { title: "LEGO Speed Champions Mercedes-AMG F1", seller: "Amazon", url: amazon("B0DHS9Y433"), tags: ["kinder", "ihn"], price: 16, priceLabel: "ca. 16 €", emoji: "🏎️", color: "#f2cdbb" },
+  { title: "Play-Doh Super Colour Set, 20 Dosen", seller: "Amazon", url: amazon("B07MV3DYGJ"), tags: ["kinder"], price: 10, priceLabel: "ca. 10 €", emoji: "🎨", color: "#f5dbc9" },
+  { title: "Ravensburger tiptoi Stift", seller: "Amazon", url: amazon("B09TPRRSW7"), tags: ["kinder"], price: 36, priceLabel: "ca. 36 €", emoji: "✏️", color: "#e1e9c9" },
+
+  // Wichtel
+  { title: "Tee-Geschenkset „Kleines Weihnachtswunder“", seller: "Amazon", url: amazon("B0FS1R28NP"), tags: ["wichtel", "sie", "ihn"], price: 6, priceLabel: "ca. 6 €", emoji: "🍵", color: "#cfe3d6" },
+  { title: "Weihnachts-Glückskekse, 12 Stück", seller: "Amazon", url: amazon("B0F8P1Y5C5"), tags: ["wichtel", "sie", "ihn", "kinder"], price: 10, priceLabel: "ca. 10 €", emoji: "🥠", color: "#f3e4b8" }
 ];
