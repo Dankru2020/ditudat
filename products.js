@@ -11,7 +11,7 @@
 //          und Suchergebnissen übernommen). Vor der Veröffentlichung gegenprüfen.
 // emoji/color: Platzhalter, bis echte Produktbilder da sind (image: "bilder/xyz.jpg" überschreibt das)
 
-window.AMAZON_TAG = ""; // <- hier deine PartnerNet-ID eintragen
+window.AMAZON_TAG = "ditudat-21"; // PartnerNet-Tracking-ID
 
 function amazon(asin) {
   return "https://www.amazon.de/dp/" + asin + (window.AMAZON_TAG ? "?tag=" + window.AMAZON_TAG : "");
