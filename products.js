@@ -20,13 +20,13 @@ function amazon(asin) {
 
 window.PRODUCTS = [
   // Für Sie
-  { title: "Duftkerzen-Geschenkset, 12er-Pack", seller: "Amazon", url: amazon("B0F6CR563J"), tags: ["sie", "wichtel"], price: 17, priceLabel: "ca. 17 €", emoji: "🕯️", color: "#f3d9c4" },
-  { title: "Kuschelige Sherpa-Decke mit Ärmeln", seller: "Amazon", url: amazon("B0CHPCWDDT"), tags: ["sie", "ihn"], price: 37, priceLabel: "ca. 37 €", emoji: "🧣", color: "#e4d3e9" },
+  { title: "Yankee Candle Duftkerzen-Geschenkset (Votivkerzen)", seller: "Amazon", url: amazon("B0D6MJ917M"), tags: ["sie", "wichtel"], price: 28, priceLabel: "", emoji: "🕯️", color: "#f3d9c4" },
+  { title: "Gözze Kuscheldecke mit Cashmere-Feeling", seller: "Amazon", url: amazon("B073X1KB47"), tags: ["sie", "ihn"], price: 28, priceLabel: "", emoji: "🧣", color: "#e4d3e9" },
   { title: "The Ordinary Niacinamid-Serum 10 %", seller: "Amazon", url: amazon("B01MDTVZTZ"), tags: ["sie", "wichtel"], price: 5, priceLabel: "ca. 5 €", emoji: "🧴", color: "#e7d6ee" },
 
   // Für Ihn
-  { title: "Kaffee-Probierset: 5 Kaffees aus aller Welt", seller: "Amazon", url: amazon("B0733CKYSS"), tags: ["ihn", "sie"], price: 16, priceLabel: "ca. 16 €", emoji: "☕", color: "#e6d5bd" },
-  { title: "Soundcore P20i Bluetooth-Kopfhörer (In-Ear)", seller: "Amazon", url: amazon("B0BTYCRJSS"), tags: ["ihn", "sie"], price: 21, priceLabel: "ca. 21 €", emoji: "🎧", color: "#d3dcec" },
+  { title: "Brühderlich Kaffee-Geschenkset (4 × 125 g)", seller: "Amazon", url: amazon("B09K6HHDTD"), tags: ["ihn", "sie"], price: 37, priceLabel: "", emoji: "☕", color: "#e6d5bd" },
+  { title: "JBL Wave Buds 2 Kopfhörer mit Noise-Cancelling", seller: "Amazon", url: amazon("B0DHL63KWK"), tags: ["ihn", "sie"], price: 38, priceLabel: "", emoji: "🎧", color: "#d3dcec" },
   { title: "JBL Tune 530BT On-Ear-Kopfhörer", seller: "Amazon", url: amazon("B0FSGN86M9"), tags: ["ihn", "sie"], price: 39, priceLabel: "ca. 39 €", emoji: "🎧", color: "#cfd9e6" },
   { title: "Philips Fusselrasierer", seller: "Amazon", url: amazon("B07M8J529S"), tags: ["ihn", "sie"], price: 11, priceLabel: "ca. 11 €", emoji: "🧺", color: "#d8dde2" },
 
