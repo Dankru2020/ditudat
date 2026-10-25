@@ -5,7 +5,8 @@
 // (z. B. "deinname-21"). Dann hängt die Seite sie automatisch an alle Amazon-Links an.
 // Für Produkte anderer Händler (Awin usw.) setze statt "asin" ein eigenes "url".
 //
-// tags:    sie, ihn, kinder, wichtel
+// tags:    sie, ihn, kinder, wichtel (Kleine Geschenke), geburtstag, weihnachten
+//          "weihnachten" = rein saisonal: wird nur vom 1. Oktober bis 6. Januar gezeigt (siehe unten)
 // price:   Zahl in Euro (nur für die Filter "Unter 20 €" / "Unter 50 €")
 // priceLabel: wird unten automatisch aus "price" als Preisbereich gebildet ("unter 20 €").
 //          Amazon verlangt aktuelle Preise, deshalb zeigen wir keine festen Beträge.
@@ -20,32 +21,32 @@ function amazon(asin) {
 
 window.PRODUCTS = [
   // Für Sie
-  { title: "Yankee Candle Duftkerzen-Geschenkset (Votivkerzen)", seller: "Amazon", url: amazon("B0D6MJ917M"), tags: ["sie", "wichtel"], price: 28, priceLabel: "", emoji: "🕯️", color: "#f3d9c4" },
-  { title: "Gözze Kuscheldecke mit Cashmere-Feeling", seller: "Amazon", url: amazon("B073X1KB47"), tags: ["sie", "ihn"], price: 28, priceLabel: "", emoji: "🧣", color: "#e4d3e9" },
-  { title: "The Ordinary Niacinamid-Serum 10 %", seller: "Amazon", url: amazon("B01MDTVZTZ"), tags: ["sie", "wichtel"], price: 5, priceLabel: "ca. 5 €", emoji: "🧴", color: "#e7d6ee" },
+  { title: "Yankee Candle Duftkerzen-Geschenkset (Votivkerzen)", seller: "Amazon", url: amazon("B0D6MJ917M"), tags: ["sie", "wichtel", "geburtstag"], price: 28, priceLabel: "", emoji: "🕯️", color: "#f3d9c4" },
+  { title: "Gözze Kuscheldecke mit Cashmere-Feeling", seller: "Amazon", url: amazon("B073X1KB47"), tags: ["sie", "ihn", "geburtstag"], price: 28, priceLabel: "", emoji: "🧣", color: "#e4d3e9" },
+  { title: "The Ordinary Niacinamid-Serum 10 %", seller: "Amazon", url: amazon("B01MDTVZTZ"), tags: ["sie", "wichtel", "geburtstag"], price: 5, priceLabel: "ca. 5 €", emoji: "🧴", color: "#e7d6ee" },
 
   // Für Ihn
-  { title: "Brühderlich Kaffee-Geschenkset (4 × 125 g)", seller: "Amazon", url: amazon("B09K6HHDTD"), tags: ["ihn", "sie"], price: 37, priceLabel: "", emoji: "☕", color: "#e6d5bd" },
-  { title: "JBL Wave Buds 2 Kopfhörer mit Noise-Cancelling", seller: "Amazon", url: amazon("B0DHL63KWK"), tags: ["ihn", "sie"], price: 38, priceLabel: "", emoji: "🎧", color: "#d3dcec" },
-  { title: "JBL Tune 530BT On-Ear-Kopfhörer", seller: "Amazon", url: amazon("B0FSGN86M9"), tags: ["ihn", "sie"], price: 39, priceLabel: "ca. 39 €", emoji: "🎧", color: "#cfd9e6" },
+  { title: "Brühderlich Kaffee-Geschenkset (4 × 125 g)", seller: "Amazon", url: amazon("B09K6HHDTD"), tags: ["ihn", "sie", "geburtstag"], price: 37, priceLabel: "", emoji: "☕", color: "#e6d5bd" },
+  { title: "JBL Wave Buds 2 Kopfhörer mit Noise-Cancelling", seller: "Amazon", url: amazon("B0DHL63KWK"), tags: ["ihn", "sie", "geburtstag"], price: 38, priceLabel: "", emoji: "🎧", color: "#d3dcec" },
+  { title: "JBL Tune 530BT On-Ear-Kopfhörer", seller: "Amazon", url: amazon("B0FSGN86M9"), tags: ["ihn", "sie", "geburtstag"], price: 39, priceLabel: "ca. 39 €", emoji: "🎧", color: "#cfd9e6" },
   { title: "Philips Fusselrasierer", seller: "Amazon", url: amazon("B07M8J529S"), tags: ["ihn", "sie"], price: 11, priceLabel: "ca. 11 €", emoji: "🧺", color: "#d8dde2" },
 
   // Spiele für alle
-  { title: "Flip 7 – Kartenspiel (Kosmos)", seller: "Amazon", url: amazon("B0DQVGD538"), tags: ["kinder", "ihn", "sie", "wichtel"], price: 10, priceLabel: "ca. 10 €", emoji: "🃏", color: "#cfe3d6" },
-  { title: "Hitster – Musik-Partyspiel", seller: "Amazon", url: amazon("B09T3K9ZC6"), tags: ["ihn", "sie", "kinder"], price: 15, priceLabel: "ca. 15 €", emoji: "🎵", color: "#f6d3d1" },
-  { title: "Stadt Land Weihnachten – Ratespiel", seller: "Amazon", url: amazon("B0DG5Y8K84"), tags: ["wichtel", "sie", "ihn", "kinder"], price: 10, priceLabel: "ca. 10 €", emoji: "🎲", color: "#d6e8dc" },
-  { title: "Perplexus Rebel – 3D-Kugellabyrinth", seller: "Amazon", url: amazon("B07MKCZJNJ"), tags: ["kinder", "ihn"], price: 16, priceLabel: "ca. 16 €", emoji: "🌀", color: "#dbe6f2" },
+  { title: "Flip 7 – Kartenspiel (Kosmos)", seller: "Amazon", url: amazon("B0DQVGD538"), tags: ["kinder", "ihn", "sie", "wichtel", "geburtstag"], price: 10, priceLabel: "ca. 10 €", emoji: "🃏", color: "#cfe3d6" },
+  { title: "Hitster – Musik-Partyspiel", seller: "Amazon", url: amazon("B09T3K9ZC6"), tags: ["ihn", "sie", "kinder", "geburtstag"], price: 15, priceLabel: "ca. 15 €", emoji: "🎵", color: "#f6d3d1" },
+  { title: "Stadt Land Weihnachten – Ratespiel", seller: "Amazon", url: amazon("B0DG5Y8K84"), tags: ["wichtel", "sie", "ihn", "kinder", "weihnachten"], price: 10, priceLabel: "ca. 10 €", emoji: "🎲", color: "#d6e8dc" },
+  { title: "Perplexus Rebel – 3D-Kugellabyrinth", seller: "Amazon", url: amazon("B07MKCZJNJ"), tags: ["kinder", "ihn", "geburtstag"], price: 16, priceLabel: "ca. 16 €", emoji: "🌀", color: "#dbe6f2" },
 
   // Für Kinder
-  { title: "LEGO Star Wars Adventskalender 2026", seller: "Amazon", url: amazon("B0GGSK4J2N"), tags: ["kinder"], price: 25, priceLabel: "ca. 25 €", emoji: "🎄", color: "#cde5d4" },
-  { title: "LEGO City Adventskalender 2026", seller: "Amazon", url: amazon("B0GGSTTS1R"), tags: ["kinder"], price: 22, priceLabel: "ca. 22 €", emoji: "🚒", color: "#f1e2b8" },
-  { title: "LEGO Speed Champions Mercedes-AMG F1", seller: "Amazon", url: amazon("B0DHS9Y433"), tags: ["kinder", "ihn"], price: 16, priceLabel: "ca. 16 €", emoji: "🏎️", color: "#f2cdbb" },
-  { title: "Play-Doh Super Colour Set, 20 Dosen", seller: "Amazon", url: amazon("B07MV3DYGJ"), tags: ["kinder"], price: 10, priceLabel: "ca. 10 €", emoji: "🎨", color: "#f5dbc9" },
-  { title: "Ravensburger tiptoi Stift", seller: "Amazon", url: amazon("B09TPRRSW7"), tags: ["kinder"], price: 36, priceLabel: "ca. 36 €", emoji: "✏️", color: "#e1e9c9" },
+  { title: "LEGO Star Wars Adventskalender 2026", seller: "Amazon", url: amazon("B0GGSK4J2N"), tags: ["kinder", "weihnachten"], price: 25, priceLabel: "ca. 25 €", emoji: "🎄", color: "#cde5d4" },
+  { title: "LEGO City Adventskalender 2026", seller: "Amazon", url: amazon("B0GGSTTS1R"), tags: ["kinder", "weihnachten"], price: 22, priceLabel: "ca. 22 €", emoji: "🚒", color: "#f1e2b8" },
+  { title: "LEGO Speed Champions Mercedes-AMG F1", seller: "Amazon", url: amazon("B0DHS9Y433"), tags: ["kinder", "ihn", "geburtstag"], price: 16, priceLabel: "ca. 16 €", emoji: "🏎️", color: "#f2cdbb" },
+  { title: "Play-Doh Super Colour Set, 20 Dosen", seller: "Amazon", url: amazon("B07MV3DYGJ"), tags: ["kinder", "geburtstag"], price: 10, priceLabel: "ca. 10 €", emoji: "🎨", color: "#f5dbc9" },
+  { title: "Ravensburger tiptoi Stift", seller: "Amazon", url: amazon("B09TPRRSW7"), tags: ["kinder", "geburtstag"], price: 36, priceLabel: "ca. 36 €", emoji: "✏️", color: "#e1e9c9" },
 
   // Wichtel
-  { title: "Tee-Geschenkset „Kleines Weihnachtswunder“", seller: "Amazon", url: amazon("B0FS1R28NP"), tags: ["wichtel", "sie", "ihn"], price: 6, priceLabel: "ca. 6 €", emoji: "🍵", color: "#cfe3d6" },
-  { title: "Weihnachts-Glückskekse, 12 Stück", seller: "Amazon", url: amazon("B0F8P1Y5C5"), tags: ["wichtel", "sie", "ihn", "kinder"], price: 10, priceLabel: "ca. 10 €", emoji: "🥠", color: "#f3e4b8" }
+  { title: "Tee-Geschenkset „Kleines Weihnachtswunder“", seller: "Amazon", url: amazon("B0FS1R28NP"), tags: ["wichtel", "sie", "ihn", "weihnachten"], price: 6, priceLabel: "ca. 6 €", emoji: "🍵", color: "#cfe3d6" },
+  { title: "Weihnachts-Glückskekse, 12 Stück", seller: "Amazon", url: amazon("B0F8P1Y5C5"), tags: ["wichtel", "sie", "ihn", "kinder", "weihnachten"], price: 10, priceLabel: "ca. 10 €", emoji: "🥠", color: "#f3e4b8" }
 ];
 
 // Preisbereich statt festem Betrag
@@ -54,3 +55,19 @@ window.PRODUCTS.forEach(function (p) {
   var top = bands.find(function (b) { return p.price < b; });
   p.priceLabel = top ? "unter " + top + " €" : "ab 100 €";
 });
+
+// Saisonlogik: Produkte mit dem Tag "weihnachten" gibt es nur vom 1. Oktober bis 6. Januar
+// (nach dem Datum des Besuchers im Browser). Sonst bleiben sie überall verborgen.
+// window.getToday lässt sich zum Testen überschreiben.
+window.getToday = function () { return new Date(); };
+
+window.isChristmasSeason = function () {
+  var d = window.getToday();
+  var m = d.getMonth(); // 0 = Januar, 9 = Oktober
+  return m >= 9 || (m === 0 && d.getDate() <= 6);
+};
+
+// Gibt an, ob ein Produkt gerade gezeigt werden darf
+window.isVisible = function (p) {
+  return p.tags.indexOf("weihnachten") === -1 || window.isChristmasSeason();
+};

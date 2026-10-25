@@ -55,3 +55,28 @@ footer a { margin: 0 10px; color: #f0c36a; }
 .page { background: #fff; border: 1px solid var(--line); border-radius: 14px; padding: 28px; margin: 28px auto; max-width: 760px; }
 .page h1 { font-family: Georgia, serif; color: var(--green); margin-top: 0; }
 .todo { background: #fff3cd; padding: 1px 5px; border-radius: 4px; }
+
+/* Laufband mit allen sichtbaren Produkten */
+.ticker-bar { background: var(--green-dark); border-top: 1px solid rgba(255,255,255,.12); display: flex; align-items: center; gap: 10px; padding: 10px 0 10px 0; max-width: 100%; overflow: hidden; }
+.ticker-bar[hidden] { display: none; }
+.ticker { flex: 1; min-width: 0; overflow: hidden; }
+.ticker-track { display: flex; width: max-content; animation: ticker-scroll var(--ticker-duration, 60s) linear infinite; }
+.ticker-group { display: flex; gap: 10px; padding-right: 10px; flex-shrink: 0; }
+@keyframes ticker-scroll { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+/* Pause: per Knopf, bei Hover und bei Tastaturfokus */
+.ticker-bar.paused .ticker-track,
+.ticker:hover .ticker-track,
+.ticker:focus-within .ticker-track { animation-play-state: paused; }
+.pill { display: inline-flex; align-items: center; gap: 8px; white-space: nowrap; text-decoration: none; background: var(--cream); color: var(--green-dark); border: 2px solid transparent; border-radius: 999px; padding: 6px 14px; font-size: 14px; font-weight: 600; }
+.pill:hover { border-color: #f0c36a; }
+.pill:focus-visible { outline: 3px solid #f0c36a; outline-offset: 2px; }
+.pill-price { color: var(--red); font-weight: 700; }
+.ticker-toggle { flex-shrink: 0; margin-right: 12px; background: #f0c36a; color: var(--green-dark); border: 0; border-radius: 999px; padding: 6px 14px; font-size: 14px; font-weight: 700; cursor: pointer; }
+.ticker-toggle:focus-visible { outline: 3px solid #fff; outline-offset: 2px; }
+/* Wer weniger Bewegung möchte: keine Animation, stattdessen waagerecht scrollbar */
+@media (prefers-reduced-motion: reduce) {
+  .ticker-track { animation: none; }
+  .ticker { overflow-x: auto; }
+  .ticker-group[aria-hidden="true"], .ticker-toggle { display: none; }
+}
+footer .copyright { margin-top: 10px; opacity: .7; }
